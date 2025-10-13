@@ -28,7 +28,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 mb-5 py-4">
       <div className="row justify-content-center">
         <div className="col-12 col-md-8 col-lg-6">
           <div className="card">
@@ -70,7 +70,7 @@ const Profile = () => {
                 </p>
               </div>
 
-              {/* RF010 - Mostrar nivel y puntos solo para viewers (espectadores) */}
+              
               {user.role === 'viewer' && (
                 <div className="card bg-light mb-4">
                   <div className="card-body">

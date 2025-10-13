@@ -1,7 +1,7 @@
 import "./Card.css"
 
 const Card = (props: CardProps) => {
-    return <div className="card">
+    return <div className="card stream-card">
               <img src={props.persona.foto} className="card-img-top"/>
             <div className="card-body">
                     <h5 className="card-title">{props.persona.nombre}</h5>

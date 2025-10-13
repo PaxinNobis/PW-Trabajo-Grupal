@@ -31,9 +31,7 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
+/* Eliminada regla .card que causaba conflicto con Bootstrap */
 
 .read-the-docs {
   color: #888;
