@@ -68,12 +68,22 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     setUser(null);
   };
 
+  /**
+   * Función para actualizar el usuario actual (por ejemplo, al cambiar de rol)
+   */
+  const updateUser = (updatedUser: User): void => {
+    setUser(updatedUser);
+    // Guardar en localStorage
+    localStorage.setItem('streaming_user', JSON.stringify(updatedUser));
+  };
+
   const value: AuthContextType = {
     user,
     loading,
     login,
     signup,
     logout,
+    updateUser,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

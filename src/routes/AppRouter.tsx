@@ -15,6 +15,7 @@ import About from '../pages/Terms';
 import TyC from '../pages/TyC';
 import Nosotros from '../pages/Nosotros';
 import PanelControl from '../pages/PanelControl';
+import ConvertirseCreador from '../pages/ConvertirseCreador';
 
 /**
  * Router principal de la aplicación
@@ -56,6 +57,14 @@ const AppRouter = () => {
               element={
                 <PrivateRoute>
                   <PanelControl />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/convertirse-creador"
+              element={
+                <PrivateRoute>
+                  <ConvertirseCreador />
                 </PrivateRoute>
               }
             />

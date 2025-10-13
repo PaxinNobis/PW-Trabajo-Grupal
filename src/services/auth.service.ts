@@ -20,12 +20,13 @@ const determineUserRole = (email: string): UserRole => {
 };
 
 /**
- * Genera datos iniciales para viewers (RF010)
+ * Genera datos iniciales para viewers (RF009, RF010)
  */
 const generateViewerData = () => {
   return {
-    level: 5,      // Nivel inicial simulado
-    points: 820,   // Puntos iniciales simulados
+    level: 5,       // Nivel inicial simulado
+    points: 820,    // Puntos iniciales simulados
+    coins: 150,     // Saldo inicial de monedas (RF009)
   };
 };
 

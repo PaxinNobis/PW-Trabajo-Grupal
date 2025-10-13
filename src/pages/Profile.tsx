@@ -77,7 +77,8 @@ const Profile = () => {
                     <h5 className="card-title">📊 Estadísticas de Espectador</h5>
                     
                     <div className="row g-3 mt-2">
-                      <div className="col-6">
+                      {/* RF010 - Nivel */}
+                      <div className="col-4">
                         <div className="text-center">
                           <div className="display-6 fw-bold text-primary">{user.level || 5}</div>
                           <p className="text-muted mb-0">
@@ -86,11 +87,22 @@ const Profile = () => {
                         </div>
                       </div>
                       
-                      <div className="col-6">
+                      {/* RF010 - Puntos */}
+                      <div className="col-4">
                         <div className="text-center">
                           <div className="display-6 fw-bold text-success">{user.points || 820}</div>
                           <p className="text-muted mb-0">
                             <small>💎 Puntos</small>
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* RF009 - Monedas */}
+                      <div className="col-4">
+                        <div className="text-center">
+                          <div className="display-6 fw-bold text-warning">{user.coins || 150}</div>
+                          <p className="text-muted mb-0">
+                            <small>💰 Monedas</small>
                           </p>
                         </div>
                       </div>

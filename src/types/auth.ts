@@ -14,9 +14,12 @@ export interface User {
   name: string;
   email: string;
   role: UserRole;
-  // Datos específicos para viewers (RF010)
+  // Datos específicos para viewers (RF009, RF010)
   level?: number;      // Nivel del espectador
   points?: number;     // Puntos acumulados
+  coins?: number;      // Saldo de monedas (RF009)
+  // Estado de solicitud de creador
+  creatorRequestPending?: boolean;  // Si el viewer tiene solicitud pendiente
 }
 
 /**
@@ -45,4 +48,5 @@ export interface AuthContextType {
   login: (credentials: LoginCredentials) => Promise<void>;
   signup: (data: SignupData) => Promise<void>;
   logout: () => void;
+  updateUser: (user: User) => void;
 }
