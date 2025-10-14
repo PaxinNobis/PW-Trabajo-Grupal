@@ -1,6 +1,6 @@
- 
+import ConfiguracionNiveles from "./ConfiguracionNiveles";
 
 const Configuracion = function() {
-    return <div className="p-4">Prueba configuracion</div>
+    return <ConfiguracionNiveles/>
 }
 export default Configuracion;
