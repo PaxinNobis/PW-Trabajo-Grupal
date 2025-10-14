@@ -25,6 +25,7 @@ function Feed({ streams }: FeedProps) {
         {streams.map((stream) => (
           <StreamCard
             key={stream.id}
+            id={stream.id}
             thumbnail={stream.thumbnail}
             title={stream.title}
             channel={stream.channel}

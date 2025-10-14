@@ -11,11 +11,11 @@ import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import Profile from '../pages/Profile';
 import PrivateRoute from './PrivateRoute';
-import About from '../pages/Terms';
 import TyC from '../pages/TyC';
 import Nosotros from '../pages/Nosotros';
 import PanelControl from '../pages/PanelControl';
 import ConvertirseCreador from '../pages/ConvertirseCreador';
+import Streaming from '../pages/Streaming';
 
 /**
  * Router principal de la aplicación
@@ -68,6 +68,9 @@ const AppRouter = () => {
                 </PrivateRoute>
               }
             />
+            
+            {/* Ruta de visualización de streaming */}
+            <Route path="/streaming/:streamId" element={<Streaming />} />
             
             {/* Ruta 404 - redirige al home */}
             <Route path="*" element={<Home />} />
