@@ -7,6 +7,8 @@ interface ChatBarProps {
 }
 const ChatBar = (props : ChatBarProps) => {
     const [TextChat, SetTextChat] = useState<string>("")
+    const [contador, setContador] = useState<number>(0);
+
     const TextChange = (e : React.ChangeEvent<HTMLInputElement>) => {
         return (
             SetTextChat(e.currentTarget.value)
@@ -18,6 +20,8 @@ const ChatBar = (props : ChatBarProps) => {
         const minutos = ahora.getMinutes();
         const horafinal = `${horas}:${minutos}`
         props.setMensajes([...props.mensajes, {texto : texto, hora : horafinal}])
+        setContador(contador + 1);
+        console.log("Se clickeó " + contador + " veces")
     }
     return(
         <div className="ChatBar">
