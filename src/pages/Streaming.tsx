@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar/NavBar"
 import LeftSide from "../components/LeftSide/LeftSide"
 import RightSide from "../components/RightSide/RightSide"
 import MiddleSide from "../components/MiddleSide/MiddleSide"
@@ -318,9 +317,6 @@ const Streaming = () => {
     ]
     return (
     <div className = "container-fluid Page">
-        <div className="row NavBar-Seccion">
-            <NavBar></NavBar>
-        </div>
         <div className="row Main-Seccion">
             <div className="col-2" id="Left-Page">
                 <LeftSide streams = {streams}></LeftSide>

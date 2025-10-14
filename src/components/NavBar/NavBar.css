@@ -8,6 +8,11 @@
     align-items: center; /*Alinearlos al centro vertical*/
     text-align: left; /*Alinearlos a la izquierda horizontal*/
 }
+
+.Right-NavBar .nav-link {
+    margin-left: 1rem; /*Espaciado entre los enlaces de navegación*/
+}
+
 .Middle-NavBar{
     text-align: center; /*Alinearlos al centro horizontal*/
 }
