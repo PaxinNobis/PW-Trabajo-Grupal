@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Header from "../components/Header"
 import type { Moneda } from "../components/PasarelaPago/CardMoneda"
 import GridMonedas from "../components/PasarelaPago/GridMonedas"
 import Parrafo from "../components/PasarelaPago/Parrafo"
@@ -49,21 +48,14 @@ const PasarelaPago = () => {
 const[opciones, setOpciones] = useState<Moneda[]>(TiposCompra)
 
   return <div>
-    
-    <Header/>
-
       <div className="py-5">
         <div className="container px-5">
-
-          <h3 className="fw-bold">Consigue Stars</h3>
+          <h3 className="fw-bold">Consigue DogeCoins</h3>
               <div>
                     <GridMonedas moneda={opciones}/>
                     <h5 className="mt-3">Total = PEN{}</h5>
                     <button type="button" className="btn btn-primary btn-lg mb-5">Recargar</button>
               </div>
-                         
-          <Parrafo/>
-
         </div>
       </div>
 

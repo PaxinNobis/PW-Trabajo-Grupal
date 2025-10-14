@@ -1,4 +1,5 @@
 import "./CardMoneda.css"
+import dogecoinLogo from "../../assets/doge.png"
 
 const CardMoneda = (props: CardMonedaProps) => {
     return <div className="text-center">
@@ -6,7 +7,14 @@ const CardMoneda = (props: CardMonedaProps) => {
             <div className="card_moneda">
             <div className="card-body ">
               <h5>{props.moneda.nombre}</h5>
-              <h3 className="card-title fw-bold">🌟{props.moneda.valor}</h3>
+              <h3 className="card-title fw-bold">
+                <img 
+                  src={dogecoinLogo} 
+                  alt="Dogecoin" 
+                  style={{ width: '30px', height: '30px', marginRight: '5px', verticalAlign: 'middle' }}
+                />
+                {props.moneda.valor}
+              </h3>
               <p className="card-text">PEN{props.moneda.en_soles}</p>
               </div>
           </div>

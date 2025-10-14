@@ -45,6 +45,13 @@ const Header = () => {
         <div className="d-flex align-items-center justify-content-end gap-2">
           {user ? (
             <>
+              {/* Botón para comprar Stars (solo para viewers) */}
+              {user.role === 'viewer' && (
+                <Link to="/PasarelaPago" className="btn btn-warning btn-sm fw-bold" title="Comprar Stars">
+                  Comprar
+                </Link>
+              )}
+              
               {/* Mostrar monedas si es viewer */}
               {user.role === 'viewer' && user.coins !== undefined && (
                 <CoinsDisplay coins={user.coins} />

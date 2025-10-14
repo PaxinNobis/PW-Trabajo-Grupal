@@ -16,6 +16,7 @@ import Nosotros from '../pages/Nosotros';
 import PanelControl from '../pages/PanelControl';
 import ConvertirseCreador from '../pages/ConvertirseCreador';
 import Streaming from '../pages/Streaming';
+import PasarelaPago from '../pages/PasarelaPago';
 
 /**
  * Router principal de la aplicación
@@ -40,6 +41,7 @@ const AppRouter = () => {
             {/* Req 08 */}
             <Route path="/TyC" element={<TyC />} />
             <Route path="/nosotros" element={<Nosotros/>} />
+            <Route path="/PasarelaPago" element={<PasarelaPago/>} />
 
             
             
