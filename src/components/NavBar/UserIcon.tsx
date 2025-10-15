@@ -4,6 +4,7 @@
 import { Link } from 'react-router-dom';
 import type { User } from '../../types/auth';
 import "../../css/Icons.css";
+import "./UserIcon.css";
 
 interface UserIconProps {
   user: User;
@@ -14,14 +15,13 @@ const UserIcon = ({ user, onLogout }: UserIconProps) => {
   return (
     <div className="dropdown">
       <button 
-        className="btn btn-link p-0"
+        className="btn btn-link p-0 user-icon-button"
         type="button" 
         id="userDropdown" 
         data-bs-toggle="dropdown" 
         aria-expanded="false"
-        style={{ border: 'none', background: 'transparent' }}
       >
-        <i className="bi bi-person-circle icon" style={{ cursor: 'pointer' }}></i>
+        <i className="bi bi-person-circle icon user-icon-cursor"></i>
       </button>
       <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
         {/* Nombre del usuario */}

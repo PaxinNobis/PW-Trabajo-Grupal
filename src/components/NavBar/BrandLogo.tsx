@@ -3,10 +3,11 @@
 
 import { Link } from 'react-router-dom';
 import "../../css/Title.css";
+import "./BrandLogo.css";
 
 const BrandLogo = () => {
   return (
-    <Link to="/" style={{ textDecoration: 'none' }}>
+    <Link to="/" className="brand-logo-link">
       <h1 className="title">AstroTV</h1>
     </Link>
   );

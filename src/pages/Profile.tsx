@@ -3,7 +3,8 @@
 
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import Puntos from '../assets/Puntos.png'
+import Puntos from '../assets/Puntos.png';
+import './Profile.css';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -39,8 +40,7 @@ const Profile = () => {
               {/* Avatar placeholder */}
               <div className="text-center mb-4">
                 <div 
-                  className="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center"
-                  style={{ width: '100px', height: '100px', fontSize: '2rem' }}
+                  className="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center profile-avatar"
                 >
                   {user.name.charAt(0).toUpperCase()}
                 </div>
@@ -96,7 +96,7 @@ const Profile = () => {
                             <small>
                               <img src={Puntos} 
                               alt="" 
-                              style={{ width: '30px', height: '30px', marginRight: '5px', verticalAlign: 'middle' }}
+                              className="profile-points-icon"
                               />Puntos
                               
                             </small>
@@ -119,11 +119,10 @@ const Profile = () => {
                       <p className="mb-2">
                         <small className="text-muted">Progreso al siguiente nivel:</small>
                       </p>
-                      <div className="progress" style={{ height: '20px' }}>
+                      <div className="progress profile-progress-bar">
                         <div 
-                          className="progress-bar bg-success" 
+                          className="progress-bar bg-success profile-progress-value" 
                           role="progressbar" 
-                          style={{ width: '65%' }}
                           aria-valuenow={65} 
                           aria-valuemin={0} 
                           aria-valuemax={100}
