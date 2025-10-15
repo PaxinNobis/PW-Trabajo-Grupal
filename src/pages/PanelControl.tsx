@@ -5,6 +5,7 @@ import PanelOptions from '../components/PanelOptions';
 import Videos from './Videos';
 import Analiticas from './Analiticas';
 import Configuracion from './Configuracion';
+import GestionRegalos from './GestionRegalos';
 
 const PanelControl = function(){
   type Stream = { id: number; title: string; viewers: number; status: 'live' | 'idle' | 'offline' };
@@ -51,6 +52,7 @@ const PanelControl = function(){
   if (seccionActiva === 'Videos') contenidoCentral = <Videos />;
   if (seccionActiva === 'Estadísticas') contenidoCentral = <Analiticas />;
   if (seccionActiva === 'Configuración') contenidoCentral = <Configuracion />;
+  if (seccionActiva === 'Regalos') contenidoCentral = <GestionRegalos />;
 
   return (
     <div className="container mt-4">
@@ -58,7 +60,7 @@ const PanelControl = function(){
 
       <div className="row mt-3">
         <PanelOptions
-          opciones={["Stream", "Videos", "Estadísticas", "Configuración"]}
+          opciones={["Stream", "Videos", "Estadísticas", "Configuración", "Regalos"]}
           onSeleccionar={(o) => setSeccionActiva(o)}
         />
 

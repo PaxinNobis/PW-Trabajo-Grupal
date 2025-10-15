@@ -18,6 +18,7 @@ import ConvertirseCreador from '../pages/ConvertirseCreador';
 import Streaming from '../pages/Streaming';
 import PackMonedas from '../pages/PackMonedas';
 import PasarelaPago from '../pages/PasarelaPago';
+import GestionRegalos from '../pages/GestionRegalos';
 
 /**
  * Router principal de la aplicación
@@ -69,6 +70,14 @@ const AppRouter = () => {
               element={
                 <PrivateRoute>
                   <ConvertirseCreador />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/gestion-regalos"
+              element={
+                <PrivateRoute>
+                  <GestionRegalos />
                 </PrivateRoute>
               }
             />
