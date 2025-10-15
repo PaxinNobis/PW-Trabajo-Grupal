@@ -22,7 +22,11 @@ const RightSide = (props: RightSideProps) => {
                     })
                 }
             </div>
+<<<<<<< HEAD
             <ChatBar mensajes={props.mensajes} setMensajes = {props.setMensajes}></ChatBar>
+=======
+            <ChatBar mensajes={props.mensajes} setMensajes = {props.setMensajes} />
+>>>>>>> 81c7666b670ecc7dfddc377ff4bcc76039f04a46
             <PointsBar></PointsBar>
         </div>
     )
