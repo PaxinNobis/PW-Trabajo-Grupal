@@ -1,64 +1,69 @@
-import { useState } from "react"
-import type { Moneda } from "../components/PasarelaPago/CardMoneda"
-import GridMonedas from "../components/PasarelaPago/GridMonedas"
+
+import "./PasarelaPago.css"
 
 const PasarelaPago = () => {
+  return  <div className="container px- py-5">
+      <div>
 
-    const TiposCompra: Moneda[] = [
+          <h1>Completar compra</h1>
+          <div className="text-start mt-4">
+              <h5 className="fw-bold">Resumen de compra</h5>
+              <p>{"TipoPaquete"} x{30}monedas </p>
+          </div>
+          <hr className="w-30 mx-auto border-2"/> 
 
-  {
-      id: "1",
-      nombre: "Starter pack",
-      valor: 30,
-      en_soles: 1.50,  
-  },
-  {
-      id: "2",
-      nombre: "Bronze pack",
-      valor: 350,
-      en_soles: 16.45,  
-  },
-  {
-      id: "3",
-      nombre: "Silver pack",
-      valor: 700,
-      en_soles: 30.89,  
-  },
-  {
-      id: "4",
-      nombre: "Gold pack",
-      valor: 1500,
-      en_soles: 60.79,  
-  },
-  {
-      id: "5",
-      nombre: "Platinum pack",
-      valor: 3500,
-      en_soles: 155.45,  
-  },
-  {
-      id: "6",
-      nombre: "Galaxy pack",
-      valor: 7000,
-      en_soles: 308.89,  
-  }
+          <h5 className="fw-bold text-end">PEN {"precio_total"}</h5>
+          <hr className="w-30 mx-auto border-2"/> 
 
-]
-const[opciones] = useState<Moneda[]>(TiposCompra)
+          <div className="border  px-3 py-2">
+            
+            <div className="row">
 
-  return <div>
-      <div className="py-5">
-        <div className="container px-5">
-          <h3 className="fw-bold">Consigue DogeCoins</h3>
-              <div>
-                    <GridMonedas moneda={opciones}/>
-                    <h5 className="mt-3">Total = PEN{}</h5>
-                    <button type="button" className="btn btn-primary btn-lg mb-5">Recargar</button>
-              </div>
-        </div>
+            <div className="text-start mt-3 col-6">
+             <h5 className="fw-bold">Pagar con Tarjeta</h5>
+             <h6>Información de facturación</h6>
+             
+            
+           </div>
+           <div className="col-6 mt-3 text-end">
+            <img src="https://content.app-sources.com/s/80905201177183951/uploads/Images/credit-card-logos-2213231.png?format=webp" className="img_pago mb-3" alt="tarjetas" />
+           </div>
+           <p>*Tu información se mantendrá confidencial. 🌞</p>
+
+            </div>
+
+           <form className="row g-3 text-start mb-3">
+             <div className="col-md-6">
+               <label className="form-label">Nombre</label>
+               <input type="text" className="form-control" id="inputNombre"/>
+             </div>
+             <div className="col-md-6">
+               <label className="form-label">Apellido</label>
+               <input type="text" className="form-control" id="inputApellido"/>
+             </div>
+             <div className="col-12">
+               <label className="form-label">Numero de tarjeta</label>
+               <input type="text" className="form-control" id="inputTarjeta" placeholder="XXXX-XXXX XXXX-XXXX"/>
+             </div>
+             <div className="col-12">
+               <label  className="form-label">CVV</label>
+               <input type="text" className="form-control" id="inputCVV" placeholder="123"/>
+             </div>
+           </form>
+
+         </div>
+         </div>
+
+         {/*boton*/}
+                  <div className="modal-footer mt-3">
+                    <button type="button" className="btn btn-primary btn-lg"
+                    //onClick={() => navigate("/")}
+                    >Realizar Pago</button>
+                  </div>
+
       </div>
+     
 
-  </div>
-}
+};
 
-export default PasarelaPago
+export default PasarelaPago;

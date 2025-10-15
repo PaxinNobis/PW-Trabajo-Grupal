@@ -1,4 +1,3 @@
-import img_tyc from "../imagenes/img_tyc.png"
 import "../TyC/SeccionCentral.css"
 import { NavLink } from 'react-router-dom';
 
@@ -45,7 +44,7 @@ const SeccionCentral = (props: SeccionCentralProps) => {
             entre usted y AstroTV.
           </p>
           <p>Le recomendamos revisarlos con atención para comprender sus derechos y responsabilidades.</p>
-          <img src={img_tyc} alt="Términos" className="img-fluid rounded mb-5" />
+          <img src="/img_tyc.png" alt="Términos" className="img-fluid rounded mb-5" />
 
           {props.sec.map((sec) =>
             <div id={sec.id} className="mb-4">

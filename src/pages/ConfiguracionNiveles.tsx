@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import type { Nivel } from '../css/types'
 import { FilaNivel } from './FilaNivel'
 

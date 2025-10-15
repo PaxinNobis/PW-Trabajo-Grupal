@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Nivel } from '../css/types'
 
 interface FilaNivelProps {
