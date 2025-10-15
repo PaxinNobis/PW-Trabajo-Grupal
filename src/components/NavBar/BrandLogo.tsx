@@ -6,11 +6,11 @@ import "../../css/Title.css";
 import "./BrandLogo.css";
 
 const BrandLogo = () => {
-  return (
-    <Link to="/" className="brand-logo-link">
-      <h1 className="title">AstroTV</h1>
-    </Link>
-  );
+	return (
+		<Link to="/" className="brand-logo-link">
+			<h1 className="title">AstroTV</h1>
+		</Link>
+	);
 };
 
 export default BrandLogo;

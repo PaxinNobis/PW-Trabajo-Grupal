@@ -5,16 +5,16 @@ import dogecoinLogo from '../../assets/doge.png';
 import './CoinsDisplay.css';
 
 interface CoinsDisplayProps {
-  coins: number;
+	coins: number;
 }
 
 const CoinsDisplay = ({ coins }: CoinsDisplayProps) => {
-  return (
-    <div className="coins-display">
-      <img src={dogecoinLogo} alt="Dogecoin" className="doge-icon" />
-      {coins}
-    </div>
-  );
+	return (
+		<div className="coins-display">
+			<img src={dogecoinLogo} alt="Dogecoin" className="doge-icon" />
+			{coins}
+		</div>
+	);
 };
 
 export default CoinsDisplay;

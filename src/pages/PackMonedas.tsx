@@ -53,11 +53,11 @@ const PackMonedas = () => {
             <div className="container px-5">
             <h3 className="fw-bold">Consigue DogeCoins</h3>
                 <div>
-                        <GridMonedas moneda={opciones}/>
-                        <h5 className="mt-3">Total = PEN{}</h5>
-                        <Link to="/PasarelaPago" className="btn btn-primary btn-xl fw-bold" title="Recarga">
-                                Recargar
-                        </Link>
+                    <GridMonedas moneda={opciones}/>
+                    <h5 className="mt-3">Total = PEN{}</h5>
+                    <Link to="/PasarelaPago" className="btn btn-primary btn-xl fw-bold" title="Recarga">
+                            Recargar
+                    </Link>
                 </div>
             </div>
         </div>

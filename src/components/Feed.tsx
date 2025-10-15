@@ -15,26 +15,25 @@ interface FeedProps {
 }
 
 const Feed = (props: FeedProps) => {
-  return (
-    <div className="container my-4">
-      <h2 className="mb-3 fw-bold">Streams Recomendados</h2>
-      
-      {/* Grilla responsive */}
-      <div className="row">
-        {/* Renderizado declarativo con map */}
-        {props.streams.map((stream) => (
-          <StreamCard
-            key={stream.id}
-            id={stream.id}
-            thumbnail={stream.thumbnail}
-            title={stream.title}
-            channel={stream.channel}
-            viewers={stream.viewers}
-          />
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <div className="container my-4">
+            <h2 className="mb-3 fw-bold">Streams Recomendados</h2>
+        {/* Grilla responsive */}
+            <div className="row">
+                {/* Renderizado declarativo con map */}
+                {props.streams.map((stream) => (
+                <StreamCard
+                    key={stream.id}
+                    id={stream.id}
+                    thumbnail={stream.thumbnail}
+                    title={stream.title}
+                    channel={stream.channel}
+                    viewers={stream.viewers}
+                />
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default Feed;
