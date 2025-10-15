@@ -124,7 +124,7 @@ const Profile = () => {
                         <div 
                           className="progress-bar bg-success profile-progress-value" 
                           role="progressbar" 
-                          aria-valuenow={65} 
+                          aria-valuenow={30} 
                           aria-valuemin={0} 
                           aria-valuemax={100}
                         >

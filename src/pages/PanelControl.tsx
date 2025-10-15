@@ -29,6 +29,22 @@ const PanelControl = function(){
       <div className="card-body">
         <h5 className="card-title">Vista previa del Stream</h5>
         <p className="text-muted">Aquí aparecerá la vista previa y controles del stream.</p>
+        <div className="mt-3">
+                      <p className="mb-2">
+                        <small className="text-muted">Horas restantes para acceder al siguiente nivel:</small>
+                      </p>
+                      <div className="progress profile-progress-bar">
+                        <div 
+                          className="progress-bar bg-success profile-progress-value" 
+                          role="progressbar" 
+                          aria-valuenow={30} 
+                          aria-valuemin={0} 
+                          aria-valuemax={100}
+                        >
+                          65%
+                        </div>
+                      </div>
+                    </div>
       </div>
     </div>
   );
