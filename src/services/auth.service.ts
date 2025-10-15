@@ -26,46 +26,14 @@ const DEMO_ACCOUNTS = [
   },
 ];
 
-/**
- * Determina el rol del usuario basado en su email (simulación)
- * En producción, el rol vendría del servidor
- */
-const determineUserRole = (email: string): UserRole => {
-  const lowerEmail = email.toLowerCase();
-  // Si el email contiene "streamer", asignar rol streamer
-  if (lowerEmail.includes('streamer')) {
-    return 'streamer';
-  }
-  // Por defecto, todos son viewers (espectadores)
-  return 'viewer';
-};
 
-/**
- * Genera datos iniciales para viewers (RF009, RF010)
- */
-const generateViewerData = () => {
-  return {
-    level: 5,       // Nivel inicial simulado
-    points: 820,    // Puntos iniciales simulados
-    coins: 150,     // Saldo inicial de monedas (RF009)
-  };
-};
-
-/**
- * Simula un delay de red (como si fuera una llamada HTTP)
- */
-const simulateNetworkDelay = (): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, 800));
-};
 
 /**
  * Simula el login de un usuario
  * En producción, esto haría una petición POST a /api/login
  */
 export const loginUser = async (credentials: LoginCredentials): Promise<User> => {
-  await simulateNetworkDelay();
-  
-  // Validación básica simulada
+  // Validación básica
   if (!credentials.email || !credentials.password) {
     throw new Error('Email y contraseña son requeridos');
   }
@@ -74,97 +42,41 @@ export const loginUser = async (credentials: LoginCredentials): Promise<User> =>
     throw new Error('Email inválido');
   }
   
-  if (credentials.password.length < 6) {
-    throw new Error('La contraseña debe tener al menos 6 caracteres');
-  }
-  
-  // Verificar si es una cuenta de prueba
+  // Buscar cuenta de prueba
   const demoAccount = DEMO_ACCOUNTS.find(
     acc => acc.email.toLowerCase() === credentials.email.toLowerCase() && 
            acc.password === credentials.password
   );
   
-  if (demoAccount) {
-    // Usar los datos de la cuenta de prueba
-    const user: User = {
-      id: Math.random().toString(36).substr(2, 9),
-      name: demoAccount.name,
-      email: demoAccount.email,
-      role: demoAccount.role,
-      // Añadir datos de viewer si corresponde
-      ...(demoAccount.role === 'viewer' ? {
-        level: demoAccount.level,
-        points: demoAccount.points,
-        coins: demoAccount.coins,
-      } : {}),
-    };
-    
-    // Guardar en localStorage
-    localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(user));
-    return user;
+  if (!demoAccount) {
+    throw new Error('Credenciales incorrectas');
   }
   
-  // Si no es una cuenta de prueba, continuar con el flujo normal
-  // Determinar rol del usuario
-  const role = determineUserRole(credentials.email);
-  
-  // Simular respuesta exitosa del servidor
+  // Usar los datos de la cuenta de prueba
   const user: User = {
     id: Math.random().toString(36).substr(2, 9),
-    name: credentials.email.split('@')[0],
-    email: credentials.email,
-    role: role,
-    // Añadir datos de viewer si corresponde (RF010)
-    ...(role === 'viewer' ? generateViewerData() : {}),
+    name: demoAccount.name,
+    email: demoAccount.email,
+    role: demoAccount.role,
+    // Añadir datos de viewer si corresponde
+    ...(demoAccount.role === 'viewer' ? {
+      level: demoAccount.level,
+      points: demoAccount.points,
+      coins: demoAccount.coins,
+    } : {}),
   };
   
-  // Guardar en localStorage (simula guardar token JWT)
+  // Guardar en localStorage
   localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(user));
-  
   return user;
 };
 
 /**
  * Simula el registro de un nuevo usuario
- * En producción, esto haría una petición POST a /api/signup
+ * Solo permite usar las cuentas de prueba pre-configuradas
  */
-export const signupUser = async (data: SignupData): Promise<User> => {
-  await simulateNetworkDelay();
-  
-  // Validaciones básicas
-  if (!data.name || !data.email || !data.password) {
-    throw new Error('Todos los campos son requeridos');
-  }
-  
-  if (!data.email.includes('@')) {
-    throw new Error('Email inválido');
-  }
-  
-  if (data.password.length < 6) {
-    throw new Error('La contraseña debe tener al menos 6 caracteres');
-  }
-  
-  if (data.name.length < 3) {
-    throw new Error('El nombre debe tener al menos 3 caracteres');
-  }
-  
-  // Determinar rol del usuario
-  const role = determineUserRole(data.email);
-  
-  // Simular respuesta exitosa del servidor
-  const user: User = {
-    id: Math.random().toString(36).substr(2, 9),
-    name: data.name,
-    email: data.email,
-    role: role,
-    // Añadir datos de viewer si corresponde (RF010)
-    ...(role === 'viewer' ? generateViewerData() : {}),
-  };
-  
-  // Guardar en localStorage
-  localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(user));
-  
-  return user;
+export const signupUser = async (_data: SignupData): Promise<User> => {
+  throw new Error('El registro está deshabilitado. Por favor, usa una de las cuentas de prueba.');
 };
 
 /**

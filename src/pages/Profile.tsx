@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Puntos from '../assets/Puntos.png';
 import './Profile.css';
+import NotificacionNivel from '../components/NotificacionNivel';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -170,9 +171,12 @@ const Profile = () => {
               </p>
             </div>
           </div>
+          <NotificacionNivel></NotificacionNivel>
         </div>
       </div>
     </div>
+    
+
   );
 };
 
