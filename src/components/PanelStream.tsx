@@ -9,7 +9,7 @@ type Props = {
   };
 };
 
-const PanelStream: React.FC<Props> = ({ stream }) => {
+function PanelStream({ stream }: Props) {
   return (
     <div className="list-group-item d-flex justify-content-between align-items-center">
       <div>

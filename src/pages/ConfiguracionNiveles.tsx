@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import type { Nivel } from '../css/types'
 import { FilaNivel } from './FilaNivel'
 
-export const ConfiguracionNiveles: React.FC = () => {
+export const ConfiguracionNiveles = function(){
   const nivelesIniciales: Nivel[] = [
     { id: 1, nombre: 'Bronce', puntosRequeridos: 100, recompensa: 'Badge Bronce' },
     { id: 2, nombre: 'Plata', puntosRequeridos: 250, recompensa: 'Badge Plata' },

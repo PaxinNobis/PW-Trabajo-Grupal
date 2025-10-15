@@ -6,7 +6,7 @@ import Videos from './Videos';
 import Analiticas from './Analiticas';
 import Configuracion from './Configuracion';
 
-const PanelControl: React.FC = () => {
+const PanelControl = function(){
   type Stream = { id: number; title: string; viewers: number; status: 'live' | 'idle' | 'offline' };
   const mockStreams: Stream[] = [
     { id: 1, title: 'Mi stream en vivo', viewers: 120, status: 'live' },

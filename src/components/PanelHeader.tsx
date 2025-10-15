@@ -1,6 +1,6 @@
  
 
-const PanelHeader: React.FC = () => {
+const PanelHeader = function(){
   return (
     <div className="d-flex align-items-center justify-content-between">
       <h1 className="h4">Panel de creador</h1>

@@ -64,6 +64,15 @@ const Login = () => {
             <div className="card-body p-4">
               <h2 className="card-title text-center mb-4">Iniciar Sesión</h2>
               
+              {/* Cuentas de prueba */}
+              <div className="alert" role="alert">
+                <strong>Cuentas de prueba:</strong>
+                <ul className="mb-0 mt-2">
+                  <li><strong>Espectador:</strong> espectador@gmail.com / espectador123</li>
+                  <li><strong>Creador:</strong> creador@gmail.com / creador123</li>
+                </ul>
+              </div>
+              
               {/* Mensaje de error */}
               {error && (
                 <div className="alert alert-danger" role="alert">

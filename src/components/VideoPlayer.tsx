@@ -5,7 +5,7 @@ type Props = {
   title?: string;
 };
 
-const VideoPlayer: React.FC<Props> = ({ src, title }) => {
+const VideoPlayer = function({src, title} : Props){
   return (
     <div className="ratio ratio-16x9">
       <iframe

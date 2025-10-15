@@ -9,7 +9,7 @@ const Videos = () => {
         <div className="col-6">
           <VideoPlayer
             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Odio react"
+            title="vods"
           />
         </div>
         <div className="col-6">
