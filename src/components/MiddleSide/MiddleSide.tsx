@@ -34,6 +34,7 @@ const MiddleSide = (props : MiddleSideProps) => {
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 }
