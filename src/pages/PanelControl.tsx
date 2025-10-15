@@ -25,7 +25,6 @@ const PanelControl = function(){
 		</div>
   	);
 
-<<<<<<< HEAD
 	if (seccionActiva === 'Stream') contenidoCentral = (
 		<div className="card">
 			<div className="card-body">
@@ -41,49 +40,6 @@ const PanelControl = function(){
                 <h5 className="card-title">Vista previa del Stream</h5>
                 <p className="text-muted">Aquí aparecerá la vista previa y controles del stream.</p>
             </div>
-=======
-  if (seccionActiva === 'Stream') contenidoCentral = (
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">Vista previa del Stream</h5>
-        <p className="text-muted">Aquí aparecerá la vista previa y controles del stream.</p>
-        <div className="mt-3">
-                      <p className="mb-2">
-                        <small className="text-muted">Horas restantes para acceder al siguiente nivel:</small>
-                      </p>
-                      <div className="progress profile-progress-bar">
-                        <div 
-                          className="progress-bar bg-success profile-progress-value" 
-                          role="progressbar" 
-                          aria-valuenow={30} 
-                          aria-valuemin={0} 
-                          aria-valuemax={100}
-                        >
-                          65%
-                        </div>
-                      </div>
-                    </div>
-      </div>
-    </div>
-  );
-  if (seccionActiva === 'Videos') contenidoCentral = <Videos />;
-  if (seccionActiva === 'Estadísticas') contenidoCentral = <Analiticas />;
-  if (seccionActiva === 'Configuración') contenidoCentral = <Configuracion />;
-  if (seccionActiva === 'Regalos') contenidoCentral = <GestionRegalos />;
-
-  return (
-    <div className="container mt-4">
-      <PanelHeader />
-
-      <div className="row mt-3">
-        <PanelOptions
-          opciones={["Stream", "Videos", "Estadísticas", "Configuración", "Regalos"]}
-          onSeleccionar={(o) => setSeccionActiva(o)}
-        />
-
-        <div className="col-8">
-          {contenidoCentral}
->>>>>>> 1b67596c8d430804a3bb1f499612fddf23186eaf
         </div>
     );
 	} else if (seccionActiva === 'Videos') {
