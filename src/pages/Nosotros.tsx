@@ -1,15 +1,10 @@
 import { useState } from "react"
-import type { Integrante } from "../components/Card"
-import CardGrid from "../components/CardGrid"
-import imagen_about from "../components/imagenes/imagen_about.jpg"
+
 import "../pages/Nosotros.css"
-import Redes from "../components/Redes"
 
+import GridIntegrantes, { type Integrante } from "../components/GridIntegrantes"
 
-const Nosotros = () => {
-    
-
-    const personas : Integrante[] = [
+const personas : Integrante[] = [
     {
         nombre : "Sebastian Balbuena Herrera ",
         cod : 20230286,
@@ -45,38 +40,60 @@ const Nosotros = () => {
         cod : 20232637,
         foto :"https://media.licdn.com/dms/image/v2/D4E03AQHdSzZ3tN1JKA/profile-displayphoto-shrink_800_800/B4EZZX5PerHoAc-/0/1745231346341?e=1762992000&v=beta&t=MCPOkuvNqCN6wYGRwGJMaJ4LLfCnD_IHUSa5I5DyNXc"
 
-    },
-] 
+    }
+]
+
+const Nosotros = () => {
 
     const[Grupo1] = useState<Integrante[]>(personas)
 
     return <div>
 
         <div className="seccion px-3">
-            <div className="m-5">
+            <div className="m-5 px-5">
                 
                 <div className="row contenido">
+                    <h1 className="fw-bold mb-5">Sobre Nosotros</h1>
                     {/* izquierda*/}
-                    <div className="seccion_contenido col-md-6 mt-4 ml-5">
-                        <h1 className="fw-bold">ABOUT US</h1>
-                        <h3 className="mt-3 py-2">
-                            Programación Web - 655
-                        </h3>
-                        <p className="descripcion py-3">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit sociis duis curae, felis a nec mi potenti at eros viverra cum, 
-                            lectus vel cursus cras pellentesque non mus eleifend sollicitudin. Dictumst taciti non vestibulum sagittis ut donec magna nisi libero, porttitor platea netus suspendisse felis odio varius per velit, iaculis sapien sodales suscipit viverra aliquam faucibus molestie. Etiam magna ad ultricies porta dui nullam mollis malesuada aliquam maecenas, 
-                            ridiculus condimentum elementum quisque auctor molestie sem nisi congue, curae augue aptent leo vestibulum praesent interdum libero arcu.
-                        </p>
-                    
-                        <Redes/>
+                    <div className="seccion_contenido  col-md-6  mt-4 ml-5">
+                        
+                        <h2 className="h4 mb-3">Nuestra Misión</h2>
+                            <p>
+                                StreamPlatform es la plataforma líder de streaming en vivo que conecta a
+                                creadores de contenido con audiencias globales. Nuestra misión es democratizar
+                                la transmisión en vivo y hacer que sea accesible para todos.
+                            </p>
+                            <h2 className="h4 mb-3">¿Qué Ofrecemos?</h2>
+                        <ul>
+                            <li>Streaming en alta calidad con baja latencia</li>
+                            <li>Herramientas para creadores de contenido</li>
+                            <li>Sistema de recompensas para espectadores</li>
+                            <li>Comunidad activa y moderada</li>
+                            <li>Soporte 24/7 para todos los usuarios</li>
+                        </ul>
+                        
 
                     </div>
                     {/* derecha*/}
-                    <div className="seccion_imagen col-md-6 mt-md-0">
-                    <img src={imagen_about} className="img-fluid mt-5 d-flex py-5 w-100" alt="" />
+                    <div className="col-md-6 mt-md-0">
+                        <div className="mt-5">
+                    <div className="card mb-2 bg-primary text-white mt-5">
+                        <div className="card-body p-4 text-center">
+                            <h2 className="h4 mb-3">Únete a Nuestra Comunidad</h2>
+                            <p>Miles de streamers y espectadores ya forman parte de StreamPlatform</p>
+                            <a href="/signup" className="btn btn-light btn-lg mt-2">
+                            Registrarse Ahora
+                            </a>
+                        </div>
+                        </div>
                 </div>
+                    
+                            </div>
+                    
+                    
                 </div>
 
+                
                
             </div>
             
@@ -88,7 +105,7 @@ const Nosotros = () => {
         <div className="container py-3">
             <hr className="w-30 mx-auto border border-2 border-primary"/> 
             <h4 className="text-center py-3 fw-bold">Grupo 1 - Integrantes</h4>
-            <CardGrid miembros={Grupo1}/>
+            <GridIntegrantes miembros={Grupo1}/>
         </div>
 
     </div>    

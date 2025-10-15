@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="row">
           {/* Columna de enlaces */}
           <div className="col-md-6">
-            <h6 className="fw-bold mb-3">StreamPlatform</h6>
+            <h6 className="fw-bold mb-3">AstroTV</h6>
             <ul className="list-unstyled">
               <li className="nav-item">
                 <NavLink

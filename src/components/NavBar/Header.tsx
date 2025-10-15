@@ -47,7 +47,7 @@ const Header = () => {
             <>
               {/* Botón para comprar Stars (solo para viewers) */}
               {user.role === 'viewer' && (
-                <Link to="/PasarelaPago" className="btn btn-warning btn-sm fw-bold" title="Comprar Stars">
+                <Link to="/PackMonedas" className="btn btn-warning btn-sm fw-bold" title="Comprar Stars">
                   Comprar
                 </Link>
               )}
