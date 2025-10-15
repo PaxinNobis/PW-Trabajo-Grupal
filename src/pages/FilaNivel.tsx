@@ -6,7 +6,7 @@ interface FilaNivelProps {
   onActualizar: (id: number, campo: keyof Nivel, valor: string | number) => void
 }
 
-export const FilaNivel: React.FC<FilaNivelProps> = ({ nivel, onActualizar }) => {
+export const FilaNivel = function({nivel, onActualizar} : FilaNivelProps){
   return (
     <tr>
       <td>{nivel.id}</td>

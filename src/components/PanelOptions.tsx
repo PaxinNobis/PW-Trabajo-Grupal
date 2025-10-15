@@ -7,7 +7,7 @@ interface PanelControlProps {
     onSeleccionar: (opcion: string) => void;
 }
 
-const PanelOptions: React.FC<PanelControlProps> = (props) => {
+const PanelOptions = function(props: PanelControlProps)  {
   const [seleccionado, setSeleccionado] = useState(props.opciones[0]);
 
   const handleClick = (opcion: string) => {
