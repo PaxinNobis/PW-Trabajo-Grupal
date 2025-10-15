@@ -1,19 +1,18 @@
 // components/NavBar/CoinsDisplay.tsx
 // Muestra el saldo de monedas del usuario (solo viewers)
 
+import dogecoinLogo from '../../assets/doge.png';
+import './CoinsDisplay.css';
+
 interface CoinsDisplayProps {
   coins: number;
 }
 
 const CoinsDisplay = ({ coins }: CoinsDisplayProps) => {
   return (
-    <div style={{ 
-      color: '#ffc107', 
-      fontWeight: 'bold', 
-      fontSize: '0.9rem',
-      marginRight: '0.5rem'
-    }}>
-      💰 {coins}
+    <div className="coins-display">
+      <img src={dogecoinLogo} alt="Dogecoin" className="doge-icon" />
+      {coins}
     </div>
   );
 };

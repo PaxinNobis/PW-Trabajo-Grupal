@@ -1,7 +1,6 @@
 import { useState } from "react"
 import type { Moneda } from "../components/PasarelaPago/CardMoneda"
 import GridMonedas from "../components/PasarelaPago/GridMonedas"
-import Parrafo from "../components/PasarelaPago/Parrafo"
 
 const PasarelaPago = () => {
 
@@ -45,7 +44,7 @@ const PasarelaPago = () => {
   }
 
 ]
-const[opciones, setOpciones] = useState<Moneda[]>(TiposCompra)
+const[opciones] = useState<Moneda[]>(TiposCompra)
 
   return <div>
       <div className="py-5">

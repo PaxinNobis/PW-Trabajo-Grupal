@@ -4,3 +4,7 @@
   background: #111;
   border-radius: 8px;
 }
+
+.panel-options-container {
+  min-height: 100vh;
+}

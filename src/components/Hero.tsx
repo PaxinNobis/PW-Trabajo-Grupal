@@ -1,4 +1,6 @@
 // Interface para un slide individual
+import './Hero.css';
+
 interface SlideData {
   id: number;
   image: string;
@@ -11,7 +13,7 @@ interface HeroProps {
   slides: SlideData[];
 }
 
-function Hero({ slides }: HeroProps) {
+const Hero = (props: HeroProps) => {
   return (
     <div className="container my-4">
       <h2 className="mb-3 fw-bold">Canales en vivo</h2>
@@ -20,7 +22,7 @@ function Hero({ slides }: HeroProps) {
       <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
         {/* Indicadores */}
         <div className="carousel-indicators">
-          {slides.map((slide, index) => (
+          {props.slides.map((slide, index) => (
             <button
               key={slide.id}
               type="button"
@@ -35,16 +37,15 @@ function Hero({ slides }: HeroProps) {
 
         {/* Slides */}
         <div className="carousel-inner">
-          {slides.map((slide, index) => (
+          {props.slides.map((slide, index) => (
             <div
               key={slide.id}
               className={`carousel-item ${index === 0 ? "active" : ""}`}
             >
               <img
                 src={slide.image}
-                className="d-block w-100"
+                className="d-block w-100 hero-carousel-image"
                 alt={slide.title}
-                style={{ height: '400px', objectFit: 'cover' }}
               />
               <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
                 <h5 className="fw-bold">{slide.title}</h5>

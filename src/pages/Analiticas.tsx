@@ -1,6 +1,6 @@
  
 
-const Analiticas = function() {
+const Analiticas = () => {
     // Datos simulados de analíticas (en una aplicación real vendrían del backend)
     const analytics = {
         horasTransmitidas: '24:35',
@@ -39,6 +39,6 @@ const Analiticas = function() {
             
         </div>
     );
-}
+};
 
 export default Analiticas;

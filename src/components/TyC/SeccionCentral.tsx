@@ -1,6 +1,6 @@
 import img_tyc from "../imagenes/img_tyc.png"
 import "../TyC/SeccionCentral.css"
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const SeccionCentral = (props: SeccionCentralProps) => {
   return <div>

@@ -1,7 +1,7 @@
  
 import VideoPlayer from '../components/VideoPlayer';
 
-const Videos = function() {
+const Videos = () => {
   return (
     <div className="container my-4">
       <h2 className="mb-4">Mis videos</h2>

@@ -1,7 +1,7 @@
 import Hero from '../components/Hero';
 import Feed from '../components/Feed';
 
-function Home() {
+const Home = () => {
   // Datos mock (movidos desde App.tsx)
   const heroSlides = [
     {
@@ -89,6 +89,6 @@ function Home() {
       <Feed streams={recommendedStreams} />
     </>
   );
-}
+};
 
 export default Home;

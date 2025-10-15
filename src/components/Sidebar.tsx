@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Sidebar.css';
 
 // Interface para un streamer
 interface Streamer {
@@ -13,12 +14,12 @@ interface SidebarProps {
   streamers: Streamer[];
 }
 
-function Sidebar({ streamers }: SidebarProps) {
+const Sidebar = (props: SidebarProps) => {
   // Estado local para controlar expansión/colapso
   const [isExpanded, setIsExpanded] = useState(true);
 
   return (
-    <div className="bg-dark text-white p-3" style={{ minHeight: '100vh' }}>
+    <div className="bg-dark text-white p-3 sidebar-container">
       {/* Encabezado con botón toggle */}
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h5 className="mb-0">Canales</h5>
@@ -33,7 +34,7 @@ function Sidebar({ streamers }: SidebarProps) {
       {/* Lista de streamers (mostrar solo si está expandido) */}
       {isExpanded && (
         <ul className="list-unstyled">
-          {streamers.map((streamer) => (
+          {props.streamers.map((streamer) => (
             <li key={streamer.id} className="mb-3 d-flex align-items-center">
               {/* Avatar con indicador de estado */}
               <div className="position-relative me-2">
@@ -46,8 +47,7 @@ function Sidebar({ streamers }: SidebarProps) {
                 />
                 {streamer.isLive && (
                   <span
-                    className="position-absolute bottom-0 end-0 bg-danger border border-dark rounded-circle"
-                    style={{ width: '12px', height: '12px' }}
+                    className="position-absolute bottom-0 end-0 bg-danger border border-dark rounded-circle live-indicator"
                   ></span>
                 )}
               </div>
@@ -56,7 +56,7 @@ function Sidebar({ streamers }: SidebarProps) {
               <div>
                 <p className="mb-0 small fw-bold">{streamer.name}</p>
                 {streamer.isLive && (
-                  <span className="badge bg-danger" style={{ fontSize: '0.65rem' }}>
+                  <span className="badge bg-danger live-badge">
                     LIVE
                   </span>
                 )}
@@ -67,6 +67,6 @@ function Sidebar({ streamers }: SidebarProps) {
       )}
     </div>
   );
-}
+};
 
 export default Sidebar;

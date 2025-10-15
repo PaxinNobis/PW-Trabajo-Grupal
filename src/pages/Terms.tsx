@@ -2,6 +2,7 @@
 // RF008 - Página de Términos y Condiciones
 
 import { useNavigate } from 'react-router-dom';
+import './Terms.css';
 
 const Terms = () => {
   const navigate = useNavigate();
@@ -15,8 +16,7 @@ const Terms = () => {
             <img 
               src="https://via.placeholder.com/800x300/6441a5/ffffff?text=Términos+y+Condiciones"
               alt="Términos y Condiciones"
-              className="img-fluid rounded mb-3"
-              style={{ maxHeight: '300px', objectFit: 'cover', width: '100%' }}
+              className="img-fluid rounded mb-3 terms-header-image"
             />
             <h1 className="display-4 fw-bold">Términos y Condiciones</h1>
             <p className="text-muted">Última actualización: 12 de octubre de 2025</p>

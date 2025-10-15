@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Streamcard.css';
 
 // Interface para las props de una tarjeta
 interface StreamCardProps {
@@ -9,32 +10,31 @@ interface StreamCardProps {
   viewers: number;
 }
 
-function StreamCard({ id, thumbnail, title, channel, viewers }: StreamCardProps) {
+const StreamCard = (props: StreamCardProps) => {
   return (
     <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
       <div className="card bg-dark text-white h-100">
         {/* Miniatura del stream */}
         <img
-          src={thumbnail}
-          className="card-img-top"
-          alt={title}
-          style={{ height: '180px', objectFit: 'cover' }}
+          src={props.thumbnail}
+          className="card-img-top stream-card-thumbnail"
+          alt={props.title}
         />
         
         {/* Información del stream */}
         <div className="card-body">
-          <h6 className="card-title fw-bold">{title}</h6>
-          <p className="card-text text-muted mb-1">{channel}</p>
+          <h6 className="card-title fw-bold">{props.title}</h6>
+          <p className="card-text text-muted mb-1">{props.channel}</p>
           <p className="card-text">
-            <span className="badge bg-danger">{viewers.toLocaleString()} viewers</span>
+            <span className="badge bg-danger">{props.viewers.toLocaleString()} viewers</span>
           </p>
-          <Link to={`/streaming/${id}`} className="btn btn-primary btn-sm w-100">
+          <Link to={`/streaming/${props.id}`} className="btn btn-primary btn-sm w-100">
             Ver Stream
           </Link>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default StreamCard;

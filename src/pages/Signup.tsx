@@ -8,6 +8,7 @@ import { useAuth } from '../context/AuthContext';
 import FormInput from '../components/forms/FormInput';
 import SubmitButton from '../components/forms/SubmitButton';
 import type { SignupData } from '../types/auth';
+import './Signup.css';
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -106,7 +107,7 @@ const Signup = () => {
                   disabled={loading}
                 />
 
-                <div className="text-muted mb-3" style={{ fontSize: '0.875rem' }}>
+                <div className="text-muted mb-3 password-hint">
                   La contraseña debe tener al menos 6 caracteres
                 </div>
 

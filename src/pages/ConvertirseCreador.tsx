@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import './ConvertirseCreador.css';
 
 const ConvertirseCreador = () => {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ const ConvertirseCreador = () => {
           {/* Encabezado */}
           <div className="text-center mb-5">
             <h1 className="display-4 fw-bold mb-3">
-              📹 Conviértete en Creador
+              Conviértete en Creador
             </h1>
             <p className="lead text-muted">
               Comparte tu pasión con el mundo y construye tu comunidad
@@ -66,14 +67,13 @@ const ConvertirseCreador = () => {
           {/* Beneficios */}
           <div className="card shadow-sm mb-4">
             <div className="card-body p-4">
-              <h3 className="card-title mb-4">✨ Beneficios de ser Creador</h3>
+              <h3 className="card-title mb-4">Beneficios de ser Creador</h3>
               
               <div className="row g-4">
                 <div className="col-md-6">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
-                      <div className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
-                           style={{ width: '48px', height: '48px', fontSize: '1.5rem' }}>
+                      <div className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center feature-icon">
                         🎥
                       </div>
                     </div>
@@ -89,8 +89,7 @@ const ConvertirseCreador = () => {
                 <div className="col-md-6">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
-                      <div className="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" 
-                           style={{ width: '48px', height: '48px', fontSize: '1.5rem' }}>
+                      <div className="bg-success text-white rounded-circle d-flex align-items-center justify-content-center feature-icon">
                         💰
                       </div>
                     </div>
@@ -106,8 +105,7 @@ const ConvertirseCreador = () => {
                 <div className="col-md-6">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
-                      <div className="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" 
-                           style={{ width: '48px', height: '48px', fontSize: '1.5rem' }}>
+                      <div className="bg-info text-white rounded-circle d-flex align-items-center justify-content-center feature-icon">
                         📊
                       </div>
                     </div>
@@ -123,8 +121,7 @@ const ConvertirseCreador = () => {
                 <div className="col-md-6">
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0">
-                      <div className="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" 
-                           style={{ width: '48px', height: '48px', fontSize: '1.5rem' }}>
+                      <div className="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center feature-icon">
                         👥
                       </div>
                     </div>
@@ -143,25 +140,25 @@ const ConvertirseCreador = () => {
           {/* Requisitos */}
           <div className="card shadow-sm mb-4">
             <div className="card-body p-4">
-              <h3 className="card-title mb-4">📋 Requisitos</h3>
+              <h3 className="card-title mb-4">Requisitos</h3>
               
               <ul className="list-group list-group-flush">
                 <li className="list-group-item d-flex align-items-center">
-                  <i className="bi bi-check-circle-fill text-success me-3" style={{ fontSize: '1.5rem' }}></i>
+                  <i className="bi bi-check-circle-fill text-success me-3 benefit-icon"></i>
                   <div>
                     <strong>Tener al menos 18 años</strong>
                     <p className="text-muted mb-0 small">Debes ser mayor de edad para crear contenido.</p>
                   </div>
                 </li>
                 <li className="list-group-item d-flex align-items-center">
-                  <i className="bi bi-check-circle-fill text-success me-3" style={{ fontSize: '1.5rem' }}></i>
+                  <i className="bi bi-check-circle-fill text-success me-3 benefit-icon"></i>
                   <div>
                     <strong>Cumplir con las normas de la comunidad</strong>
                     <p className="text-muted mb-0 small">Respetar las reglas y políticas de la plataforma.</p>
                   </div>
                 </li>
                 <li className="list-group-item d-flex align-items-center">
-                  <i className="bi bi-check-circle-fill text-success me-3" style={{ fontSize: '1.5rem' }}></i>
+                  <i className="bi bi-check-circle-fill text-success me-3 benefit-icon"></i>
                   <div>
                     <strong>Verificación de identidad</strong>
                     <p className="text-muted mb-0 small">Proporcionar documentación válida para verificación.</p>
@@ -174,7 +171,7 @@ const ConvertirseCreador = () => {
           {/* Formulario de Aceptación */}
           <div className="card shadow-sm mb-4">
             <div className="card-body p-4">
-              <h3 className="card-title mb-4">📝 Confirmación</h3>
+              <h3 className="card-title mb-4">Confirmación</h3>
               
               <div className="form-check mb-4">
                 <input 

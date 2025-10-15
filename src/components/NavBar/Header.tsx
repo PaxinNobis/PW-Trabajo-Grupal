@@ -15,7 +15,7 @@ const Header = () => {
   const { user, logout } = useAuth();
 
   return (
-    <div className="NavBar">
+    <div className="NavBar p-3">
       {/* Sección izquierda: Logo y menú de opciones */}
       <div className="col-4 Right-NavBar">
         <BrandLogo />
@@ -58,7 +58,7 @@ const Header = () => {
               )}
               
               {/* Icono de perfil de usuario */}
-              <UserIcon user={user} onLogout={logout} />
+              <UserIcon user={user} onLogout={logout}/>
             </>
           ) : (
             <>

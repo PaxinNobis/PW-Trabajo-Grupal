@@ -11,7 +11,7 @@ const CardMoneda = (props: CardMonedaProps) => {
                 <img 
                   src={dogecoinLogo} 
                   alt="Dogecoin" 
-                  style={{ width: '30px', height: '30px', marginRight: '5px', verticalAlign: 'middle' }}
+                  className="dogecoin-logo"
                 />
                 {props.moneda.valor}
               </h3>

@@ -3,6 +3,7 @@
 
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Puntos from '../assets/Puntos.png'
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -65,7 +66,7 @@ const Profile = () => {
                 <label className="form-label fw-bold">Rol</label>
                 <p className="form-control-plaintext">
                   <span className={`badge ${user.role === 'viewer' ? 'bg-info' : 'bg-success'}`}>
-                    {user.role === 'viewer' ? '👁️ Espectador' : '📺 Streamer'}
+                    {user.role === 'viewer' ? 'Espectador' : 'Streamer :)'}
                   </span>
                 </p>
               </div>
@@ -74,7 +75,7 @@ const Profile = () => {
               {user.role === 'viewer' && (
                 <div className="card bg-light mb-4">
                   <div className="card-body">
-                    <h5 className="card-title">📊 Estadísticas de Espectador</h5>
+                    <h5 className="card-title">Estadísticas de Espectador</h5>
                     
                     <div className="row g-3 mt-2">
                       {/* RF010 - Nivel */}
@@ -92,7 +93,13 @@ const Profile = () => {
                         <div className="text-center">
                           <div className="display-6 fw-bold text-success">{user.points || 820}</div>
                           <p className="text-muted mb-0">
-                            <small>💎 Puntos</small>
+                            <small>
+                              <img src={Puntos} 
+                              alt="" 
+                              style={{ width: '30px', height: '30px', marginRight: '5px', verticalAlign: 'middle' }}
+                              />Puntos
+                              
+                            </small>
                           </p>
                         </div>
                       </div>
